@@ -6,12 +6,12 @@
     <description>汉堡君个人博客 ｜ 用简体中文记录所闻、所听、所思、所念。</description>
     <language>zh-cn</language>
     <generator>Gridea Pro</generator>
-    <lastBuildDate>Mon, 25 May 2026 19:56:02 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 20:08:54 +0800</lastBuildDate>
     <atom:link href="https://cantoneyes.github.io/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <item>
       <title>关于汉堡</title>
-      <link>https://cantoneyes.github.io/post/aboutme/</link>
-      <guid isPermaLink="true">https://cantoneyes.github.io/post/aboutme/</guid>
+      <link>https://cantoneyes.github.io/post/about/</link>
+      <guid isPermaLink="true">https://cantoneyes.github.io/post/about/</guid>
       <pubDate>Mon, 25 May 2026 19:49:58 +0800</pubDate>
       <description><![CDATA[<p>生命在于体验，职业与工作未必。<br />
 工作已经占据华人很大部分精力，博客还是少谈工作，多写体验与感悟，多分享世间一切值得尝试事物。<br />
@@ -29,7 +29,7 @@
 ]]></description>
       <category>about</category>
       <category>now</category>
-      <enclosure url="https://cantoneyes.github.io/post-images/aboutme.jpg" length="0" type="image/jpeg"></enclosure>
+      <enclosure url="https://cantoneyes.github.io/post-images/about.jpg" length="0" type="image/jpeg"></enclosure>
     </item>
     <item>
       <title>/Now 我在当下 </title>
