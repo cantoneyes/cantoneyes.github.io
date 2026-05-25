@@ -19,7 +19,7 @@
   (function () {
     try {
       var saved = localStorage.getItem('flavor-theme');
-      var theme = saved || 'auto';
+      var theme = saved || 'dark';
       if (theme === 'light') {
         document.documentElement.classList.add('theme-light');
       }
