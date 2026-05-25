@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cantoneyes</title>
+    <link>https://cantoneyes.github.io/</link>
+    <description>汉堡君个人博客 ｜ 用简体中文记录所闻、所听、所思、所念。</description>
+    <language>zh-cn</language>
+    <generator>Gridea Pro</generator>
+    <lastBuildDate>Mon, 25 May 2026 14:11:47 +0800</lastBuildDate>
+    <atom:link href="https://cantoneyes.github.io/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <item>
+      <title>/Now 我在当下 </title>
+      <link>https://cantoneyes.github.io/post/now/</link>
+      <guid isPermaLink="true">https://cantoneyes.github.io/post/now/</guid>
+      <pubDate>Mon, 25 May 2026 13:43:05 +0800</pubDate>
+      <description><![CDATA[<p><img src="https://cantoneyes.github.io/post-images/1779689480204084000_0.jpg" alt="" /><br />
+除了工作之外，汉堡君最近把精力与时间放在：</p>
+<ul>
+<li>宅家：看剧，读书，听音乐，听播客，听广播节目，做菜，偶尔玩电子游戏，搭积木（兼容乐高同款自由积木）。</li>
+<li>出门：逛公园，偶尔旅游，用手机、数码单反与胶片相机拍拍人文与风光照片。部分作品发表在Unsplash.com供免费下载使用。</li>
+<li>思考：随缘补充常识与通识，有自己独立思考。</li>
+</ul>
+<p>这中文博客，大概就会记录以上所见所闻、所思所想。</p>
+<p>更新于：2026年5月25日</p>
+]]></description>
+      <enclosure url="https://cantoneyes.github.io/post-images/now.jpg" length="0" type="image/jpeg"></enclosure>
+    </item>
+  </channel>
+</rss>
