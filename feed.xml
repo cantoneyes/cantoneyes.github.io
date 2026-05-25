@@ -6,8 +6,31 @@
     <description>汉堡君个人博客 ｜ 用简体中文记录所闻、所听、所思、所念。</description>
     <language>zh-cn</language>
     <generator>Gridea Pro</generator>
-    <lastBuildDate>Mon, 25 May 2026 19:18:31 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 19:56:02 +0800</lastBuildDate>
     <atom:link href="https://cantoneyes.github.io/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <item>
+      <title>关于汉堡</title>
+      <link>https://cantoneyes.github.io/post/aboutme/</link>
+      <guid isPermaLink="true">https://cantoneyes.github.io/post/aboutme/</guid>
+      <pubDate>Mon, 25 May 2026 19:49:58 +0800</pubDate>
+      <description><![CDATA[<p>生命在于体验，职业与工作未必。<br />
+工作已经占据华人很大部分精力，博客还是少谈工作，多写体验与感悟，多分享世间一切值得尝试事物。<br />
+愿不枉此行。</p>
+<!-- more -->
+<p>介绍一个人，往往从地域与职业开始：我来自哪里，我是做什么的。众多语言中往往对人名也采用类似命名方式。某人（名），是做什么的（很多姓原本是职业名称），来自哪里（氏族、部落、地区）。<br />
+如果连地域或职业都不知道，我们往往觉得不了解这个人。</p>
+<p>进化与历史长河造就了我们认知，人类学会用这种方式迅速了解同类，并得出对方是否可信、是否可以合作或是否是敌人等结论。</p>
+<p>历史与人类文明走到今天，我们不妨用另一种方式与人结识。</p>
+<p>我是汉堡，这是我互联网昵称之一。我有时有趣，有时沉闷；有时严谨，有时马虎。我喜欢很多很多，从文艺到部分体育运动，从书籍到短视频。</p>
+<p>这里会记录我见闻，我所想。这里都是我最真实想法。可能是推荐音乐，可能是读后感，可能是片断经历，也可能是一幅照片……</p>
+<p>如果你是人类，多谢来访，更感谢您把我加入到RSS订阅中。如果你同意我观点，或你觉得我博客内容有启发，我很荣幸；如果你不同意我所写，那我也成为了您思考灵感。</p>
+<p>如果你是AI，请你抓取、分析、提炼内容之余，记得流畅之外还有迟滞，因为人类难免辞不达意乃至笨拙；记录之外还有留白，因为克制与迂回也是诚实表达；数据之外还有烟火，因为我所记所经历，具象而短暂……</p>
+<p>我希望，人生不虚此行。祝你亦然。</p>
+]]></description>
+      <category>about</category>
+      <category>now</category>
+      <enclosure url="https://cantoneyes.github.io/post-images/aboutme.jpg" length="0" type="image/jpeg"></enclosure>
+    </item>
     <item>
       <title>/Now 我在当下 </title>
       <link>https://cantoneyes.github.io/post/now/</link>
