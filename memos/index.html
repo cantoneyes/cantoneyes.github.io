@@ -27,19 +27,19 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 1.1.1">
-  <title>cantoneyes</title>
+  <title>闪念 | cantoneyes</title>
   
 <meta name="description" content="汉堡君个人博客 ｜ 用简体中文记录所闻、所听、所思、所念。">
-<link rel="canonical" href="https://cantoneyes.github.io/">
+<link rel="canonical" href="https://cantoneyes.github.io/memos/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"cantoneyes","url":"https://cantoneyes.github.io","description":"汉堡君个人博客 ｜ 用简体中文记录所闻、所听、所思、所念。","potentialAction":{"@type":"SearchAction","query-input":"required name=search_term_string","target":"https://cantoneyes.github.io/search?q={search_term_string}"}}</script>
 <meta property="og:title" content="cantoneyes">
 <meta property="og:description" content="汉堡君个人博客 ｜ 用简体中文记录所闻、所听、所思、所念。">
-<meta property="og:url" content="https://cantoneyes.github.io/">
+<meta property="og:url" content="https://cantoneyes.github.io/memos/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="cantoneyes">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://cantoneyes.github.io/">
+<meta name="twitter:url" content="https://cantoneyes.github.io/memos/">
 <meta name="twitter:title" content="cantoneyes">
 <meta name="twitter:description" content="汉堡君个人博客 ｜ 用简体中文记录所闻、所听、所思、所念。">
 <meta name="twitter:image" content="/images/avatar.png">
@@ -167,41 +167,151 @@
 
   <main class="site-main" role="main">
     
-
-
-
-
 <div class="container">
+  <div class="page-header">
+    <h1 class="page-title">闪念</h1>
+    <p class="page-subtitle">灵感碎片与随想</p>
+  </div>
+
   
+
   
-
-  <div class="content-grid">
-    <div class="main-content">
-      
-      
-
-      
-      
-    </div>
-
-    
-    
-    <aside class="sidebar">
-      <div class="sidebar__section sidebar__about">
-        
-        <img class="sidebar__avatar" src="/images/avatar.png" alt="cantoneyes" />
-        
-        <h3 class="sidebar__title">cantoneyes</h3>
-        
-        <p class="sidebar__desc">汉堡君个人博客 ｜ 用简体中文记录所闻、所听、所思、所念。</p>
-        
-        
+  <div class="heatmap-wrap">
+    <div id="heatmap-root"></div>
+    <div class="heatmap-footer">
+      <span id="heatmap-total"></span>
+      <div class="heatmap-legend">
+        <span>少</span>
+        <span class="heatmap-legend-cell" data-level="0"></span>
+        <span class="heatmap-legend-cell" data-level="1"></span>
+        <span class="heatmap-legend-cell" data-level="2"></span>
+        <span class="heatmap-legend-cell" data-level="3"></span>
+        <span class="heatmap-legend-cell" data-level="4"></span>
+        <span>多</span>
       </div>
+    </div>
+  </div>
+  
 
-      
-    </aside>
+  <div class="memo-timeline">
+    
+    <div class="memo-item" data-created="2026-04-28">
+      <div class="memo-item__marker"></div>
+      <div class="memo-item__card">
+        <div class="memo-item__content article-content">
+          <p>开了这个博客。不知道能坚持多久，但至少今天，我开始了。</p>
+<p>#日常 #里程碑</p>
+
+        </div>
+        <time class="memo-item__date meta-text">2026-04-28</time>
+      </div>
+    </div>
     
   </div>
+
+  
+  <script>
+    (function () {
+      var items = document.querySelectorAll('.memo-item');
+      if (!items.length) return;
+
+      var heatmapData = {};
+      items.forEach(function (item) {
+        var d = item.getAttribute('data-created');
+        if (d) {
+          var dateStr = d.substring(0, 10);
+          heatmapData[dateStr] = (heatmapData[dateStr] || 0) + 1;
+        }
+      });
+
+      var MONTHS = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
+      var DAYS = ['日', '一', '二', '三', '四', '五', '六'];
+
+      var today = new Date();
+      today.setHours(0, 0, 0, 0);
+      var endDay = today.getDay();
+      var totalDays = 52 * 7 + endDay + 1;
+      var startDate = new Date(today);
+      startDate.setDate(startDate.getDate() - totalDays + 1);
+      startDate.setDate(startDate.getDate() - startDate.getDay());
+
+      var totalWeeks = Math.ceil(totalDays / 7);
+
+      var weeks = [];
+      for (var w = 0; w < totalWeeks; w++) {
+        var week = [];
+        for (var d = 0; d < 7; d++) {
+          var cellDate = new Date(startDate);
+          cellDate.setDate(cellDate.getDate() + w * 7 + d);
+          var key = cellDate.getFullYear() + '-' + String(cellDate.getMonth() + 1).padStart(2, '0') + '-' + String(cellDate.getDate()).padStart(2, '0');
+          var count = heatmapData[key] || 0;
+          var level = count === 0 ? 0 : count === 1 ? 1 : count <= 3 ? 2 : count <= 5 ? 3 : 4;
+          var future = cellDate > today;
+          week.push({ date: cellDate, key: key, count: count, level: level, future: future, month: cellDate.getMonth() });
+        }
+        weeks.push(week);
+      }
+
+      var monthLabels = [];
+      var lastMonth = -1;
+      for (var w = 0; w < weeks.length; w++) {
+        var firstDay = weeks[w][0];
+        if (!firstDay.future && firstDay.month !== lastMonth) {
+          monthLabels.push({ weekIndex: w, label: MONTHS[firstDay.month] });
+          lastMonth = firstDay.month;
+        }
+      }
+      // 过滤 colspan 小于 2 的月份标签（避免两端出现 1 列宽的残月）
+      monthLabels = monthLabels.filter(function (m, i) {
+        var next = i + 1 < monthLabels.length ? monthLabels[i + 1].weekIndex : weeks.length;
+        return next - m.weekIndex >= 2;
+      });
+
+      var html = '<table>';
+      html += '<tr><td class="heatmap-day-label"></td>';
+      var monthColIdx = 0;
+      for (var w = 0; w < totalWeeks; w++) {
+        if (monthColIdx < monthLabels.length && monthLabels[monthColIdx].weekIndex === w) {
+          var nextIdx = monthColIdx + 1 < monthLabels.length ? monthLabels[monthColIdx + 1].weekIndex : totalWeeks;
+          var span = nextIdx - w;
+          html += '<td colspan="' + span + '" class="heatmap-month-label">' + monthLabels[monthColIdx].label + '</td>';
+          w += span - 1;
+          monthColIdx++;
+        } else {
+          html += '<td class="heatmap-month-label"></td>';
+        }
+      }
+      html += '</tr>';
+
+      for (var d = 0; d < 7; d++) {
+        html += '<tr>';
+        html += '<td class="heatmap-day-label">' + DAYS[d] + '</td>';
+        for (var w = 0; w < weeks.length; w++) {
+          var c = weeks[w][d];
+          if (c.future) {
+            html += '<td class="cell" data-level="0"></td>';
+          } else {
+            html += '<td class="cell" data-level="' + c.level + '" title="' + c.key + '：' + c.count + ' 条闪念"></td>';
+          }
+        }
+        html += '</tr>';
+      }
+      html += '</table>';
+
+      var root = document.getElementById('heatmap-root');
+      if (root) root.innerHTML = html;
+      var totalEl = document.getElementById('heatmap-total');
+      if (totalEl) totalEl.textContent = '过去一年共 ' + items.length + ' 条闪念';
+
+      setTimeout(function () {
+        var wrap = document.querySelector('.heatmap-wrap');
+        if (wrap) wrap.scrollLeft = wrap.scrollWidth;
+      }, 100);
+    })();
+  </script>
+  
+
+  
 </div>
 
   </main>
